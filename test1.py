@@ -157,5 +157,4 @@ def process_files():
                            lr_accuracy=lr_accuracy,
                            lr_precision=lr_precision,
                            lr_f1_score=lr_f1_score)
-if __name__ == '__main__':
-    app.run(debug=True)
+
