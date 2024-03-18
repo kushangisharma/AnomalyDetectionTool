@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Analysis Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #c7b9ff, #a1c4fd);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 800px;
+            width: 80%;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #666;
+            margin: 5px 0;
+        }
+
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Event Count Matrix</h1>
+        {{ event_count_matrix | safe }}
+        <h1>Decision Tree Classification</h1>
+        <p>Accuracy: {{ decision_tree_accuracy }}</p>
+        <p>Precision: {{ decision_tree_precision }}</p>
+        <p>F1 Score: {{ decision_tree_f1_score }}</p>
+
+        <h1>Support Vector Machine</h1>
+        <p>Accuracy: {{ svm_accuracy }}</p>
+        <p>Precision: {{ svm_precision }}</p>
+        <p>F1 Score: {{ svm_f1_score }}</p>
+
+        <h1>Logistic Regression</h1>
+        <p>Accuracy: {{lr_accuracy}}</p>
+        <p>Precision:{{lr_precision}}</p>
+        <p>F1 Score:{{lr_f1_score }}</p>
+    </div>
+</body>
+</html>
